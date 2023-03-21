@@ -2,11 +2,26 @@
 <html>
 <head>
 <title>Rango</title>
+<style>
+    h1{
+        text-align: center;
+    }body {
+        background-color: yellow;
+      }
+
+</style>
 </head>
 <body>
-<h1>Rango says...</h1>
+<h1>School News</h1>
 <div>
-hey there partner! <br />
+{%if news %}
+    {% for page in news %}
+    <h2>{{page.title}}</h2><br/><i>by {{page.author}}. {{page.date}}<br/></i>{{page.news}}
+    {% endfor %}
+
+
+{% endif %}
+<br />
 
 </div>
 
